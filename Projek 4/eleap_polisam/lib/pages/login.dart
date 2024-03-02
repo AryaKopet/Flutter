@@ -1,9 +1,31 @@
 import 'package:flutter/material.dart';
 
+void main() {
+  runApp(Login());
+}
 
 class Login extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'e-LEAP POLISAM',
+      home: Login(),
+    );
+  }
+}
 
-  const Login({super.key});
+class FormScreen extends StatefulWidget {
+
+  const FormScreen({super.key});
+
+  @override
+  State<FormScreen> createState() => _FormScreenState();
+  }
+
+class _FormScreenState extends State<FormScreen>{
+  final nimController = TextEditingController();
+  final passController = TextEditingController();
+  bool passToggle = true;
 
   @override
   Widget build(BuildContext context) {
@@ -33,7 +55,7 @@ class Login extends StatelessWidget {
                   children: [
                     Text("e-LEAP POLISAM",
                     style: TextStyle(
-                        fontSize: 40,
+                        fontSize: 35,
                         fontWeight: FontWeight.bold,
                         color: Color.fromARGB(255, 21, 0, 112),
                       ),
@@ -43,44 +65,62 @@ class Login extends StatelessWidget {
                 SizedBox(height: 50,),
                 TextFormField(
                   keyboardType: TextInputType.emailAddress,
+                  controller: nimController,
                   decoration: InputDecoration(
-                    labelText: "Email",
+                    labelText: "Nomor Induk Mahasiswa",
                     border: OutlineInputBorder(),
-                    prefixIcon: Icon(Icons.email),
+                    prefixIcon: Icon(Icons.person),
                 ),
               ),
               SizedBox(height:20),
               TextFormField(
                   keyboardType: TextInputType.emailAddress,
+                  controller: passController,
+                  obscureText: passToggle,
                   decoration: InputDecoration(
                     labelText: "Password",
                     border: OutlineInputBorder(),
                     prefixIcon: Icon(Icons.lock),
+                    suffixIcon: InkWell(
+                      onTap: (){
+                        setState(() {
+                          passToggle = !passToggle;
+                        });
+                      },
+                      child: Icon(passToggle ? Icons.visibility : Icons.visibility_off),
+                    ),
                 ),
               ),
-              SizedBox(height: 30,),
+              SizedBox(height: 15,),
               Row(
                 children: [
                   TextButton(
-                    onPressed: (){},
+                    onPressed: (){
+                      Navigator.of(context).pushNamed('/forgot');
+                    },
                     child: Text(
                       "Lupa Password?",
                       style: TextStyle(
-                        color: Color.fromARGB(255, 32, 2, 167),
+                        color: Colors.black87,
                         fontSize: 14,
                         fontWeight: FontWeight.bold,
                       ),
                     )),
                 ],
               ),
-              SizedBox(height: 25,),
+              SizedBox(height: 35,),
               InkWell(
+                onTap: (){
+                  Navigator.of(context).pushNamed('/home');
+                  nimController.clear();
+                  passController.clear();
+                },
                 child: Container(
                   height: 50,
                   decoration: BoxDecoration(
                     color: Colors.indigo,
-                    borderRadius: BorderRadius.circular(5),
-                  ),
+                    borderRadius: BorderRadius.circular(15),
+                  ),  
                   child: Center(
                     child: Text(
                       "Login",

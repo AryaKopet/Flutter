@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import './pages/login.dart';
+import './pages/login.dart'; //Selesai Membuat Halaman
 import './pages/forgot.dart';
 import './pages/home.dart';
 import './pages/menu.dart';
@@ -20,7 +20,7 @@ class MainApp extends StatelessWidget {
       title: 'e-LEAP Polisam',
       initialRoute: '/login',
       routes: {
-        '/login': (context) => const Login(),
+        '/login': (context) => const FormScreen(),
         '/forgot': (context) => const Forgot(),
         '/home': (context) => const Home(),
         '/menu': (context) => const Menu(),
