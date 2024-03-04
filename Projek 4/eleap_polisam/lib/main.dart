@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import './pages/login.dart'; //Selesai Membuat Halaman
-import './pages/forgot.dart';
-import './pages/home.dart';
-import './pages/menu.dart';
-import './pages/profil.dart';
+import './pages/login.dart'; //Selesai Membuat Halaman Login
+import './pages/forgot.dart';//progres halaman lupa password
+import './pages/home.dart';//belum
+import './pages/menu.dart';//belum
+import './pages/profil.dart';//belum
 
 
 void main() {
@@ -21,7 +21,7 @@ class MainApp extends StatelessWidget {
       initialRoute: '/login',
       routes: {
         '/login': (context) => const FormScreen(),
-        '/forgot': (context) => const Forgot(),
+        '/forgot': (context) => ForgotPasswordScreen(),
         '/home': (context) => const Home(),
         '/menu': (context) => const Menu(),
         '/profil': (context) => const Profil(),
