@@ -22,8 +22,8 @@ class MainApp extends StatelessWidget {
       routes: {
         '/login': (context) => const FormScreen(),
         '/forgot': (context) => ForgotPasswordScreen(),
-        '/home': (context) => Home(),
-        '/menu': (context) => const Menu(),
+        '/home': (context) => HomeScreen(),
+        '/menu': (context) => Menu(),
         '/profil': (context) => ProfilePage(),
       },
     );
