@@ -1,3 +1,7 @@
-# eleap_polisam
+TUGAS UTS PROJEK 
 
-A new Flutter project.
+Nama Kelompok:
+Arya wijaya, 
+Dita Pitaloka, 
+Nuraina, 
+Sri Bintang Budi Utomo
