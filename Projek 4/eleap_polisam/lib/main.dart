@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import './pages/login.dart'; //Selesai Membuat Halaman Login
-import './pages/forgot.dart';//Selesai Membuat Halaman Lupa Password
-import './pages/home.dart';//belum
-import './pages/menu.dart';//belum
-import './pages/profil.dart';//Selesai Membuat Halaman Profil
+import './pages/login.dart';  //Selesai Membuat Halaman Login
+import './pages/forgot.dart'; //Selesai Membuat Halaman Lupa Password
+import './pages/home.dart';   //Selesai Membuat Halaman Utama Aplikasi
+import './pages/menu.dart';   //belum
+import './pages/profil.dart'; //Selesai Membuat Halaman Profil
 
 
 void main() {
@@ -22,7 +22,7 @@ class MainApp extends StatelessWidget {
       routes: {
         '/login': (context) => const FormScreen(),
         '/forgot': (context) => ForgotPasswordScreen(),
-        '/home': (context) => const Home(),
+        '/home': (context) => Home(),
         '/menu': (context) => const Menu(),
         '/profil': (context) => ProfilePage(),
       },
