@@ -74,8 +74,8 @@ class _FormScreenState extends State<FormScreen> {
                           ],
                           controller: nimController,
                           decoration: InputDecoration(
-                            labelText: "Nomor Induk Mahasiswa",
-                            labelStyle: TextStyle(color: Colors.black),
+                            hintText: 'Nomor Induk Mahasiswa',
+                            hintStyle: TextStyle(color: Colors.black),
                             border: OutlineInputBorder(),
                             prefixIcon: Icon(Icons.person),
                             filled: true,
@@ -88,8 +88,8 @@ class _FormScreenState extends State<FormScreen> {
                           controller: passController,
                           obscureText: passToggle,
                           decoration: InputDecoration(
-                            labelText: "Password",
-                            labelStyle: TextStyle(color: Colors.black),
+                            hintText: 'Password',
+                            hintStyle: TextStyle(color: Colors.black),
                             border: OutlineInputBorder(),
                             prefixIcon: Icon(Icons.lock),
                             filled: true,

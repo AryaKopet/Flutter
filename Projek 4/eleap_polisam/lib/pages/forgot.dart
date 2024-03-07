@@ -91,6 +91,29 @@ class ForgotPasswordScreen extends StatelessWidget {
                       SizedBox(height: 20.0),
                       InkWell(
                           onTap: () {
+                            // Menampilkan alert "Kode berhasil dikirimkan" saat tombol ditekan
+                            showDialog(
+                              context: context,
+                              builder: (BuildContext context) {
+                                return AlertDialog(
+                                  title: Text("Pemberitahuan", 
+                                    style: TextStyle(
+                                      color: Colors.indigo,
+                                    ),
+                                  ),
+                                  content: Text("Kode berhasil dikirimkan ke email anda"),
+                                  backgroundColor:Colors.white,
+                                  actions: [
+                                    TextButton(
+                                      onPressed: () {
+                                        Navigator.of(context).pop();
+                                      },
+                                      child: Text("OK"),
+                                    ),
+                                  ],
+                                );
+                              },
+                            );
                           },
                           child: Container(
                             height: 50,
@@ -100,7 +123,7 @@ class ForgotPasswordScreen extends StatelessWidget {
                             ),
                             child: Center(
                               child: Text(
-                                "Login",
+                                "Dapatkan Kode",
                                 style: TextStyle(
                                   color: Colors.white,
                                   fontSize: 20,
@@ -110,6 +133,7 @@ class ForgotPasswordScreen extends StatelessWidget {
                             ),
                           ),
                         ),
+
                         SizedBox(height: 15),
                         TextButton(
                               onPressed: () {
